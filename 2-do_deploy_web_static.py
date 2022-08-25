@@ -5,7 +5,7 @@ sing the function do_pack. """
 
 from fabric.api import *
 from datetime import datetime
-from os.path
+from os import path
 
 
 def do_pack():
