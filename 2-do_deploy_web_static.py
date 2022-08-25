@@ -5,7 +5,7 @@ sing the function do_pack. """
 
 from fabric.api import *
 from datetime import datetime
-from os import path
+from os.path import exists
 
 
 def do_pack():
@@ -28,7 +28,7 @@ def do_deploy(archive_path):
         Returns False if archive_path doesnt exist
     """
 
-    if path.exists(archive_path) is False:
+    if exists(archive_path) is False:
         return False
 
     else:
