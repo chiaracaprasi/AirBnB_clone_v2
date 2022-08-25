@@ -7,6 +7,10 @@ from fabric.api import *
 from datetime import datetime
 from os.path import exists
 
+env.user = 'ubuntu'
+env.hosts = ['52.23.231.242', '34.229.134.248']
+env.key_filename = ['/home/my_ssh_private_key']
+
 
 def do_pack():
     """
