@@ -9,7 +9,7 @@ from os.path import exists
 
 env.user = 'ubuntu'
 env.hosts = ['52.23.231.242', '34.229.134.248']
-env.key_filename = ['/home/my_ssh_private_key']
+env.key_filename = ['~/.ssh/id_rsa']
 
 
 def do_pack():
@@ -47,3 +47,4 @@ def do_deploy(archive_path):
         run('rm -rf {}{}/web_static'.format(path, f_name_no_ext))
         run('rm -rf /data/web_static/current')
         run('ln -s {}{}/ /data/web_static/current'.format(path, f_name_no_ext))
+        run('echo "New version deployed!"')
