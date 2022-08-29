@@ -9,7 +9,7 @@ from os.path import exists
 
 env.user = 'ubuntu'
 env.hosts = ['52.23.231.242', '34.229.134.248']
-env.key_filename = ['/home/my_ssh_private_key']
+env.key_filename = ['~/.ssh/id_rsa']
 
 
 def do_pack():
