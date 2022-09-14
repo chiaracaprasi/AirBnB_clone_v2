@@ -27,9 +27,16 @@ def show_text(text):
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def show_text_cool(text='is cool'):
+def show_C(text):
     """returns C followed by value of text"""
-    return f'C' + text.replace("_", " ")
+    return 'C ' + text.replace('_', ' ')
+
+
+@app.route('/python/', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def show_Python(text='is cool'):
+    """returns Python followed by value of text"""
+    return 'Python ' + text.replace('_', ' ')
 
 
 if __name__ == '__main__':
