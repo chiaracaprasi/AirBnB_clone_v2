@@ -42,7 +42,6 @@ def show_Python(text='is cool'):
     return 'Python ' + text.replace('_', ' ')
 
 
-@app.route('/number/', strict_slashes=False)
 @app.route('/number/<int:n>', strict_slashes=False)
 def show_number(n):
     """returns “n is a number”"""
