@@ -14,7 +14,6 @@ Routes:
 """
 
 from flask import Flask
-
 app = Flask(__name__)
 
 
@@ -28,12 +27,6 @@ def index():
 def hbnb():
     """returns HBNB!"""
     return 'HBNB'
-
-
-@app.route('/c/<text>', strict_slashes=False)
-def show_text(text):
-    """returns C followed by value of text"""
-    return f'C' + text.replace('_', ' ')
 
 
 @app.route('/c/<text>', strict_slashes=False)
