@@ -11,7 +11,6 @@ Routes:
    
 """
 
-import imp
 from flask import Flask, render_template
 from models import *
 from models import storage
@@ -28,7 +27,7 @@ def teardown_db():
 def display_states():
     """ display a HTML page"""
     return render_template('7-states_list.html',
-                           states=storage.all('States').values())
+                           states=storage.all("States"))
 
 
 if __name__ == '__main__':
