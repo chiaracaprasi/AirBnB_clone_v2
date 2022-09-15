@@ -8,6 +8,7 @@ Routes:
     H1 tag: “States”
     UL tag: with the list of all State objects present in DBStorage sorted by name (A->Z) tip
     LI tag: description of one State: <state.id>: <B><state.name></B>   
+
 """
 
 from flask import Flask, render_template
@@ -32,7 +33,7 @@ def display_states():
 @app.route('/states/<id>', strict_slashes=False)
 def display_states(state_id):
     """ display a HTML page"""
-    return render_template('9-states.htm', state_id=state_id, 
+    return render_template('9-states.htm', state_id=state_id,
                            states=storage.all('States'))
 
 
