@@ -26,7 +26,7 @@ def teardown_db(exception):
 
 @app.route('/states', strict_slashes=False)
 @app.route('/states/<id>', strict_slashes=False)
-def display_states(state_id=None):
+def display_states(state_id):
     """ display a HTML page"""
     if state_id is not None:
         state_id = 'State.' + state_id
