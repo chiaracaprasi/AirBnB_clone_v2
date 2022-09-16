@@ -24,15 +24,14 @@ def teardown_db(exception):
     storage.close()
 
 
-@app.route('/states', strict_slashes=False)
-@app.route('/states/<id>', strict_slashes=False)
-def display_states(state_id):
+@app.route('/hbnb_filters', strict_slashes=False)
+def hbnb_filters():
     """ display a HTML page"""
-    if state_id is not None:
-        state_id = 'State.' + state_id
+    states = storage.all("State").values()
+    amenities = storage.all("Amenity").values()
 
-    return render_template('9-states.htm', state_id=state_id,
-                           states=storage.all('State'))
+    return render_template('10-hbnb_filters.py', states=states,
+                           amenities=amenities)
 
 
 if __name__ == '__main__':
