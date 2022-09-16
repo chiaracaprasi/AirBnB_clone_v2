@@ -25,14 +25,14 @@ def teardown_db(exception):
 
 
 @app.route('/states', strict_slashes=False)
-@app.route('/states/<id>', strict_slashes=False)
+@app.route('/states/<state_id>', strict_slashes=False)
 def display_states(state_id=None):
     """ display a HTML page"""
     if state_id is not None:
         state_id = 'State.' + state_id
 
-    return render_template('9-states.html', state_id=state_id,
-                           states=storage.all('State'))
+    return render_template('9-states.html', states=storage.all('State'),
+                           state_id=state_id)
 
 
 if __name__ == '__main__':
