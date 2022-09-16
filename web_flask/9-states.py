@@ -31,7 +31,7 @@ def display_states(state_id=None):
     if state_id is not None:
         state_id = 'State.' + state_id
 
-    return render_template('9-states.htm', state_id=state_id,
+    return render_template('9-states.html', state_id=state_id,
                            states=storage.all('State'))
 
 
