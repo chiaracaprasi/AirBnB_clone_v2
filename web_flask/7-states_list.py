@@ -6,7 +6,8 @@ Web application must be listening on 0.0.0.0, port 5000
 Routes:
    /states_list: display a HTML page: (inside the tag BODY)
     H1 tag: “States”
-    UL tag: with the list of all State objects present in DBStorage sorted by name (A->Z) tip
+    UL tag: with the list of all State objects present in DBStorage 
+    sorted by name (A->Z) tip
     LI tag: description of one State: <state.id>: <B><state.name></B>
 """
 
@@ -17,7 +18,7 @@ app = Flask(__name__)
 
 
 @app.teardown_appcontext
-def teardown_db():
+def teardown_db(exception):
     """ After each request remove the current SQLAlchemy """
     storage.close()
 
