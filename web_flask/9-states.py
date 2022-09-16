@@ -25,15 +25,12 @@ def teardown_db(exception):
 
 
 @app.route('/states', strict_slashes=False)
-def display_states():
-    """ display a HTML page"""
-    return render_template('7-states_list.html',
-                           states=storage.all('State'))
-
-
 @app.route('/states/<id>', strict_slashes=False)
 def display_states(state_id):
     """ display a HTML page"""
+    if state_id is not None:
+        state_id = 'State.' + state_id
+
     return render_template('9-states.htm', state_id=state_id,
                            states=storage.all('State'))
 
