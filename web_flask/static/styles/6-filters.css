@@ -18,7 +18,7 @@
 	border-right: 1px solid #DDDDDD;
 }
 
-.filter_amenities {
+.filters .amenities {
 	display: inline;
 	vertical-align: middle;
 	height: 100%;
@@ -33,21 +33,23 @@
 	display: none;
 	background-color: #FAFAFA;
 	width: 100%;
-	max-height: 300px;
+
 	margin-left: -1px;
-	margin-top: 8px;
-	padding: 25px 0px;
+	margin-top: 13px;
+	padding: 0px 25px;
+
 	border: 1px solid #DDDDDD;
 	border-radius: 4px;
-	overflow: scroll;
+	max-height: 300px;
+	overflow-y: scroll;
 }
 
 .locations:hover .popover {
-	display: inline-block;
+	display: block;
 }
 
-.filter_amenities:hover .popover {
-	display: inline-block;
+.amenities:hover .popover {
+	display: block;
 }
 
 ul {
